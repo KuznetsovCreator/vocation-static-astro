@@ -1,0 +1,109 @@
+---
+import "../styles/globals.css";
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>СПб РОО МФ &laquo;Призвание&raquo;</title>
+    <meta
+      name="description"
+      content="Санкт-Петербургская региональная общественная организация специалистов с медицинским и фармацевтическим образованием."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+        padding: 50px 0;
+      }
+      .section-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        column-gap: 80px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+
+        text-align: left;
+        max-width: 450px;
+      }
+      .logo {
+        width: 180px;
+        margin-bottom: 50px;
+      }
+      .button {
+        margin-top: 20px;
+      }
+      .picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .picture > img {
+        width: 100%;
+        max-width: 520px;
+        object-fit: contain;
+      }
+      @media screen and (width <= 768px) {
+        .section-container {
+          flex-direction: column;
+          justify-content: center;
+          column-gap: 0;
+          row-gap: 60px;
+        }
+        .content {
+          align-items: center;
+          text-align: center;
+        }
+      }
+      @media screen and (width <= 425px) {
+        section {
+          padding: 30px 0;
+        }
+        .logo {
+          width: 140px;
+          margin-bottom: 30px;
+        }
+        .button {
+          margin-top: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container section-container">
+        <div class="content">
+          <img src="/logo.svg" class="logo" alt="СПб РОО МФ Призвание" />
+          <h1>Скоро будем онлайн!</h1>
+          <p>
+            Мы активно работаем над созданием нового сайта. Спасибо за Ваше
+            терпение и понимание!
+          </p>
+          <a href="https://prizvaniespb.ru/" class="button">Старый сайт</a>
+        </div>
+        <div class="picture">
+          <img src="/banner.png" alt="Баннер главного экрана" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
